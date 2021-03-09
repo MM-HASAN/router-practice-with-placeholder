@@ -8,7 +8,7 @@ const FriendDetails = () => {
     fetch(`https://jsonplaceholder.typicode.com/users/${friendId}`)
       .then((res) => res.json())
       .then((friendData) => setFriendInfo(friendData));
-  }, []);
+  }, [friendId]);
   const { name, email, phone, website } = friendINfo;
   const finfoStyle = {
     textAlign: "justify",
